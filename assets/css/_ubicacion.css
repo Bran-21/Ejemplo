@@ -1,0 +1,340 @@
+*,* ::before,*::after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 100%;
+    display:grid;  
+    min-height: 100vh;
+    flex-direction: column;
+    grid-template-rows: auto 1fr auto;
+  
+  }
+  a{
+    text-decoration: none;
+  }
+  
+ul,li{
+  list-style: none;
+}
+main{
+  margin-top: 4.7em;
+}
+footer{
+  margin: auto;
+  background: rgb(230, 225, 213);
+  width: 100%;
+}
+ 
+/*
+  *Estilo Header
+*/
+
+.contenedor_header{
+  display: flex;
+  position:fixed;
+  height: 75px;
+  padding:0 20px;
+  width: 100%;
+  background-color:rgb(221, 195, 160);
+}
+
+/*
+*Creamos el logo a la medida
+*/
+.logo{
+  padding-top: 6px;
+  width: 165px;
+  height: 65px;
+}
+/*
+*La navegacion se acomodad de izquierda a derecha
+*/
+.nav{
+  margin-left: auto;
+}
+.nav_li{
+  display: inline-block;
+}
+.nav_a{
+  display: inline-block;
+  position: relative;
+  color: black;
+  line-height: 80px;
+  padding: 0 8px;
+  text-transform: uppercase;
+}
+.mostrar{
+  height: 390px !important;
+}
+
+.icono{
+  display:none;
+  margin-left: auto;
+  line-height:65px;
+  font-size:25px;
+  cursor: pointer;
+}
+/*
+  *Fin estilo Header
+*/
+
+/*
+  *Contenedor Principal
+*/
+  .contenedor_main{
+    padding: 30px 0;
+    margin: auto;
+  }
+/*
+    *Mapa
+*/
+  .mapa{
+    max-width:80%;
+    font-size:18px;
+    height: 30em;
+    margin: auto;
+    border-radius: 30px;
+    border: 3px solid rgb(203, 180, 180);
+  }
+/* 
+    *Datos veterinaria
+*/
+.dato{
+    width:50%;
+    height: 160px;
+    margin: auto;
+    margin-top: 18px;
+    border-radius: 35px;
+    display:flex;
+    position:relative;
+    border: 3px solid rgb(203, 180, 180);
+}
+.dato_direccion{
+    width:40%;
+    right: 30px;
+    margin-top: 10px;
+    position: absolute;
+    font-size:25px;
+}
+.direccion{
+    font-size:15px;
+}
+.dato_numero{
+    width:50%;
+    margin-left: 30px;
+    margin-top: 10px;  
+    position:absolute;
+}
+.dato-li{
+  font-size:15px;
+}
+.icono-i{
+ font-size: 25px;
+ padding: 8px;
+}
+
+
+
+/*
+*Estilo Footer
+*/
+.contenedor{
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 4em;
+}
+.icono-i{
+  font-size:23px;
+  padding: 0 10px;
+}
+.dato-li{
+  font-size: 1em;
+  padding: 5px;
+  line-height: 25px;
+}
+
+.redes{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.info{
+  font-size: 1em;
+  padding: 5px;
+}
+.redes-li{
+  padding-top: 20px;
+}
+.icono-a{
+  font-size:40px;
+}
+
+.autor{
+  text-align:center;
+}
+.copyright{
+  font-size: 1.2em;
+  padding: 15px 0;
+}
+
+/*
+!MEDIA QUERY
+*/
+
+/* 
+  *Telefono - Vertical
+*/
+@media (max-width: 575.98px) and (orientation:portrait) {
+  body{
+    width: 100%;
+    background: green;
+  }
+  .nav{
+    background-color: rgb(221, 195, 160);
+    position: absolute;
+    top: 70px;
+    left: 55%;
+    width: 45%;
+    overflow: hidden;
+    height: 0;
+    transition:.7s ease-in-out; ;
+}
+.nav_li{
+    display:block;
+}
+.nav_a{
+    text-align:center;
+    font-size:15px;
+    line-height:65px;
+    width: 100%;
+}
+.contenedor_header{
+    padding-left: 2px;
+}
+.icono{
+    margin-top: 10px;
+    display:block;
+}
+/*
+  *Main
+*/
+.contenedor_main{
+    padding:20px;
+    margin:0;
+}
+.mapa{
+  max-width:100%;
+  height: 30em;
+  margin: auto;
+  border-radius: 30px;
+  border: 3px solid rgb(203, 180, 180);
+}
+/*
+  *Footer
+*/
+.contenedor_redes{
+  line-height: 20px;
+  width:100%;
+}
+.contenedor{
+  display:block;
+  padding:1.5em;
+}
+.redes{
+  margin-top:2em;
+}
+.redes-ul{
+  display: flex;
+}
+.icono-a{
+  padding: 0 20px;
+}
+}
+
+/*
+  *Telefono - Horizontal
+*/
+@media (min-width: 576px) and (max-width: 991.98px) and (orientation:landscape) {
+  body{background: rgb(194, 157, 157);}
+  .nav_a{
+      padding: 0px 4px;
+      font-size:15px;
+  }
+  .contenedor_header{
+      padding-left: 10px;
+  }
+  .contenedor_main{
+    padding:20px;
+    margin:0;
+  }
+  /*
+    *Main
+  */
+  .mapa{
+    max-width:100%;
+    height: 25em;
+    margin: auto;
+    border-radius: 30px;
+    border: 3px solid rgb(203, 180, 180);
+  }
+  .contenedor{
+    padding:1em;
+  }
+}
+
+
+/*
+  *Tablet - Vertical
+*/
+@media (min-width: 576px) and (max-width: 991.98px) and (orientation:portrait) {
+  body{background: orange;}
+  .nav_a{
+      padding: 0px 4px;
+      font-size:15px;
+  }
+  .contenedor_header{
+      padding-left: 10px;
+  }
+  .contenedor_main{
+    padding:20px;
+    margin:0;
+  }
+  /*
+    *Main
+  */
+
+  .mapa{
+    max-width:100%;
+    height: 33em;
+    margin: auto;
+    border-radius: 30px;
+    border: 4px solid rgb(203, 180, 180);
+  }
+  .contenedor{
+    padding:1em;
+  }
+}
+
+/*
+  *Tablet - Horizontal
+*/
+@media (min-width: 991.98px) and (max-width: 1199.98px)and (orientation:landscape) {
+  body{background: blue;}
+  .nav_a{
+      padding: 0px 10.5px;
+  }
+  .contenedor_header{
+      padding-left: 20px;
+  }
+  .contenedor{
+    padding:1em;
+  }
+}
+
+  
+  
