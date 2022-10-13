@@ -69,6 +69,10 @@ footer{
   height: 390px !important;
 }
 
+.icono-i{
+  font-size: px;
+}
+
 .icono{
   display:none;
   margin-left: auto;
